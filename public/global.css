@@ -13,6 +13,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: cover;
+  background-image: url("bg-two.jpg")
 }
 
 a {

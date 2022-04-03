@@ -1967,7 +1967,7 @@ var app = (function () {
     	return block;
     }
 
-    // (112:4) {:then FULL_DATA}
+    // (111:4) {:then FULL_DATA}
     function create_then_block(ctx) {
     	let if_block_anchor;
     	let current;
@@ -2026,14 +2026,14 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(112:4) {:then FULL_DATA}",
+    		source: "(111:4) {:then FULL_DATA}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (113:6) {#if FULL_DATA.city}
+    // (112:6) {#if FULL_DATA.city}
     function create_if_block(ctx) {
     	let div0;
     	let p0;
@@ -2110,17 +2110,17 @@ var app = (function () {
     			div1 = element("div");
     			create_component(weatherdata.$$.fragment);
     			attr_dev(p0, "class", "location svelte-wv2jnb");
-    			add_location(p0, file$1, 114, 10, 3666);
+    			add_location(p0, file$1, 113, 10, 3652);
     			attr_dev(p1, "class", "weather svelte-wv2jnb");
-    			add_location(p1, file$1, 122, 10, 3908);
+    			add_location(p1, file$1, 121, 10, 3894);
     			attr_dev(p2, "class", "weather-description");
-    			add_location(p2, file$1, 123, 10, 3961);
+    			add_location(p2, file$1, 122, 10, 3947);
     			attr_dev(p3, "class", "temperature svelte-wv2jnb");
-    			add_location(p3, file$1, 124, 10, 4030);
+    			add_location(p3, file$1, 123, 10, 4016);
     			attr_dev(div0, "class", "left");
-    			add_location(div0, file$1, 113, 8, 3637);
+    			add_location(div0, file$1, 112, 8, 3623);
     			attr_dev(div1, "class", "right svelte-wv2jnb");
-    			add_location(div1, file$1, 126, 8, 4099);
+    			add_location(div1, file$1, 125, 8, 4085);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -2190,14 +2190,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(113:6) {#if FULL_DATA.city}",
+    		source: "(112:6) {#if FULL_DATA.city}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (110:20)        Waiting...     {:then FULL_DATA}
+    // (109:20)        Waiting...     {:then FULL_DATA}
     function create_pending_block(ctx) {
     	let t;
 
@@ -2220,7 +2220,7 @@ var app = (function () {
     		block,
     		id: create_pending_block.name,
     		type: "pending",
-    		source: "(110:20)        Waiting...     {:then FULL_DATA}",
+    		source: "(109:20)        Waiting...     {:then FULL_DATA}",
     		ctx
     	});
 
@@ -2230,15 +2230,12 @@ var app = (function () {
     function create_fragment$1(ctx) {
     	let main_1;
     	let header;
-    	let theme;
-    	let t0;
     	let search;
     	let updating_city;
-    	let t1;
+    	let t;
     	let div;
     	let promise_1;
     	let current;
-    	theme = new Theme({ $$inline: true });
 
     	function search_city_binding(value) {
     		/*search_city_binding*/ ctx[3](value);
@@ -2272,16 +2269,14 @@ var app = (function () {
     		c: function create() {
     			main_1 = element("main");
     			header = element("header");
-    			create_component(theme.$$.fragment);
-    			t0 = space();
     			create_component(search.$$.fragment);
-    			t1 = space();
+    			t = space();
     			div = element("div");
     			info.block.c();
     			attr_dev(header, "class", "header-container svelte-wv2jnb");
     			add_location(header, file$1, 104, 2, 3417);
     			attr_dev(div, "class", "content svelte-wv2jnb");
-    			add_location(div, file$1, 108, 2, 3520);
+    			add_location(div, file$1, 107, 2, 3506);
     			add_location(main_1, file$1, 103, 0, 3408);
     		},
     		l: function claim(nodes) {
@@ -2290,10 +2285,8 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, main_1, anchor);
     			append_dev(main_1, header);
-    			mount_component(theme, header, null);
-    			append_dev(header, t0);
     			mount_component(search, header, null);
-    			append_dev(main_1, t1);
+    			append_dev(main_1, t);
     			append_dev(main_1, div);
     			info.block.m(div, info.anchor = null);
     			info.mount = () => div;
@@ -2319,13 +2312,11 @@ var app = (function () {
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(theme.$$.fragment, local);
     			transition_in(search.$$.fragment, local);
     			transition_in(info.block);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(theme.$$.fragment, local);
     			transition_out(search.$$.fragment, local);
 
     			for (let i = 0; i < 3; i += 1) {
@@ -2337,7 +2328,6 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(main_1);
-    			destroy_component(theme);
     			destroy_component(search);
     			info.block.d();
     			info.token = null;

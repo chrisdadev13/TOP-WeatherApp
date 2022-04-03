@@ -103,7 +103,6 @@
 
 <main>
   <header class="header-container">
-    <Theme />
     <Search bind:city on:click={main} />
   </header>
   <div class="content">
